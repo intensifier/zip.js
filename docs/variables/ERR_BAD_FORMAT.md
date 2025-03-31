@@ -8,6 +8,6 @@
 
 > `const` **ERR\_BAD\_FORMAT**: `string`
 
-Defined in: [index.d.ts:2016](https://github.com/gildas-lormeau/zip.js/blob/be8a40fccb32dc320b3cf56a5faf9a609e60a6cb/index.d.ts#L2016)
+Defined in: [index.d.ts:2011](https://github.com/gildas-lormeau/zip.js/blob/251b484ba01a922c47b1394efacb8926682f5796/index.d.ts#L2011)
 
 Zip format error

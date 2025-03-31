@@ -6,7 +6,7 @@
 
 # Class: CodecStream
 
-Defined in: [index.d.ts:271](https://github.com/gildas-lormeau/zip.js/blob/be8a40fccb32dc320b3cf56a5faf9a609e60a6cb/index.d.ts#L271)
+Defined in: [index.d.ts:271](https://github.com/gildas-lormeau/zip.js/blob/251b484ba01a922c47b1394efacb8926682f5796/index.d.ts#L271)
 
 Represents a class implementing `CompressionStream` or `DecompressionStream` interfaces.
 
@@ -16,29 +16,29 @@ Represents a class implementing `CompressionStream` or `DecompressionStream` int
 
 ## Constructors
 
-### new CodecStream()
+### Constructor
 
-> **new CodecStream**(`transformer`?, `writableStrategy`?, `readableStrategy`?): [`CodecStream`](CodecStream.md)
+> **new CodecStream**(`transformer`?, `writableStrategy`?, `readableStrategy`?): `CodecStream`
 
-Defined in: node\_modules/typescript/lib/lib.dom.d.ts:23111
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:23731
 
 #### Parameters
 
 ##### transformer?
 
-`Transformer`
+`Transformer`\<`any`, `any`\>
 
 ##### writableStrategy?
 
-`QueuingStrategy`
+`QueuingStrategy`\<`any`\>
 
 ##### readableStrategy?
 
-`QueuingStrategy`
+`QueuingStrategy`\<`any`\>
 
 #### Returns
 
-[`CodecStream`](CodecStream.md)
+`CodecStream`
 
 #### Inherited from
 
@@ -48,9 +48,9 @@ Defined in: node\_modules/typescript/lib/lib.dom.d.ts:23111
 
 ### readable
 
-> `readonly` **readable**: `ReadableStream`
+> `readonly` **readable**: `ReadableStream`\<`any`\>
 
-Defined in: node\_modules/typescript/lib/lib.dom.d.ts:23104
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:23724
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/TransformStream/readable)
 
@@ -62,9 +62,9 @@ Defined in: node\_modules/typescript/lib/lib.dom.d.ts:23104
 
 ### writable
 
-> `readonly` **writable**: `WritableStream`
+> `readonly` **writable**: `WritableStream`\<`any`\>
 
-Defined in: node\_modules/typescript/lib/lib.dom.d.ts:23106
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:23726
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/TransformStream/writable)
 

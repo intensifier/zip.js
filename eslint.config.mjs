@@ -1,6 +1,17 @@
 import js from "@eslint/js";
 
 export default [
+	{
+		ignores: [
+			"**/node_modules/",
+			".git/",
+			"dist/",
+			"**/*-inline.js",
+			"tests/vendor/*.js",
+			"index.cjs",
+			"index.min.js"
+		]
+	},
 	js.configs.recommended,
 	{
 		languageOptions: {
@@ -33,12 +44,6 @@ export default [
 			"no-console": [
 				"warn"
 			]
-		},
-		ignores: [
-			"**/node_modules/",
-			".git/",
-			"dist/",
-			"**/*-inline.js"
-		]
+		}
 	}
 ];

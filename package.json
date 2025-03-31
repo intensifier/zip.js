@@ -3,7 +3,7 @@
   "description": "A JavaScript library to zip and unzip files in the browser, Deno and Node.js",
   "author": "Gildas Lormeau",
   "license": "BSD-3-Clause",
-  "version": "2.7.57",
+  "version": "2.7.60",
   "type": "module",
   "keywords": [
     "zip",
@@ -37,7 +37,7 @@
     "build-fflate": "npm i --no-save fflate && npx rollup -c rollup-fflate.config.js",
     "build-fflate-dev": "npm i --no-save fflate && npx rollup -c rollup-fflate.config.dev.js",
     "build-doc-api": "npx typedoc",
-    "build-markdown-docs": "npx typedoc --plugin typedoc-plugin-markdown --out ./docs",
+    "build-doc-markdown": "npx typedoc --plugin typedoc-plugin-markdown --out ./docs",
     "test-deno": "cd ./tests && deno test --allow-read ./deno-runner.js",
     "test-node": "cd ./tests && node ./node-runner.js",
     "test-bun": "cd ./tests && bun test ./bun-runner.js",
@@ -49,7 +49,6 @@
   "types": "./index.d.ts",
   "exports": {
     "./package.json": "./package.json",
-    "./index.min.js": "./index.min.js",
     ".": {
       "import": {
         "types": "./index.d.ts",
@@ -60,13 +59,54 @@
         "default": "./index.cjs"
       }
     },
-    "./data-uri.js": "./lib/zip-data-uri.js",
-    "./lib/zip-fs.js": "./lib/zip-fs.js",
-    "./lib/zip-full.js": "./lib/zip-full.js",
-    "./lib/zip-no-worker-deflate.js": "./lib/zip-no-worker-deflate.js",
-    "./lib/zip-no-worker-inflate.js": "./lib/zip-no-worker-inflate.js",
-    "./lib/zip-no-worker.js": "./lib/zip-no-worker.js",
-    "./lib/zip.js": "./lib/zip.js"
+    "./index.min.js": {
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.min.js"
+      }
+    },
+    "./data-uri.js": {
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./lib/zip-data-uri.js"
+      }
+    },
+    "./lib/zip-fs.js": {
+      "import": {
+        "types": "./lib/zip-fs.d.ts",
+        "default": "./lib/zip-fs.js"
+      }
+    },
+    "./lib/zip-full.js": {
+      "import": {
+        "types": "./lib/zip-full.d.ts",
+        "default": "./lib/zip-full.js"
+      }
+    },
+    "./lib/zip-no-worker-deflate.js": {
+      "import": {
+        "types": "./lib/zip-no-worker-deflate.d.ts",
+        "default": "./lib/zip-no-worker-deflate.js"
+      }
+    },
+    "./lib/zip-no-worker-inflate.js": {
+      "import": {
+        "types": "./lib/zip-no-worker-inflate.d.ts",
+        "default": "./lib/zip-no-worker-inflate.js"
+      }
+    },
+    "./lib/zip-no-worker.js": {
+      "import": {
+        "types": "./lib/zip-no-worker.d.ts",
+        "default": "./lib/zip-no-worker.js"
+      }
+    },
+    "./lib/zip.js": {
+      "import": {
+        "types": "./lib/zip.d.ts",
+        "default": "./lib/zip.js"
+      }
+    }
   },
   "repository": {
     "type": "git",
@@ -77,13 +117,13 @@
   },
   "homepage": "https://gildas-lormeau.github.io/zip.js",
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.3.0",
-    "@rollup/plugin-replace": "^6.0.1",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-replace": "^6.0.2",
     "@rollup/plugin-terser": "^0.4.4",
-    "eslint": "^9.19.0",
+    "eslint": "^9.23.0",
     "http-server": "^14.1.1",
-    "rollup": "^4.28.0",
-    "typedoc": "^0.27.4",
-    "typedoc-plugin-markdown": "^4.3.2"
+    "rollup": "^4.38.0",
+    "typedoc": "^0.28.1",
+    "typedoc-plugin-markdown": "^4.6.0"
   }
 }
